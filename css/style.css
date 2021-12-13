@@ -1,0 +1,156 @@
+
+:root {
+    --bc-bd: #fafafa;
+    --bc-hh1: #d4d3d8;
+    --bc-hp: #c7c7c7;
+    --bc-conh4: #4c4e61;
+    --bc-contp: #a3a5ae;
+    --bc-contred: #a92d35;
+    --bc-contyee: #ffe09d;
+    --bc-contgree: #4cada6;
+    --bc-contblue: #5084ac;
+    --bc-bs: 4px 4px 15px 0px rgba(44, 44, 44, 0.15);
+}
+
+/*Configurando o corpo*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: var(--bc-bd);
+}
+
+
+/*Configurando os textos de cima*/
+header {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+header h1 {
+    color: var(--bc-hh1);
+    margin-bottom: 0;
+}
+
+header h2 {
+    font-size: 31px;
+    margin: 0;
+}
+
+header p {
+    color: var(--bc-hp);
+}
+
+/*Configurando as quatro caixas*/
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: var(--bc-bs);
+    margin-bottom: 30px;
+}
+
+.box .box-conteiner {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 260px;
+}
+
+.box .box-conteiner h4 {
+    color: var(--bc-conh4);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.box .box-conteiner p {
+    color: var(--bc-contp);
+    font: 13.5px;
+    font-weight: 200;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.box .box-conteiner img {
+    align-self: flex-end;
+    width: 70px;
+}
+
+.vermelha {
+    border-top: 4px solid var(--bc-contred);
+}
+
+.amarelo {
+    border-top: 4px solid var(--bc-contyee);
+}
+
+.verde {
+    border-top: 4px solid var(--bc-contgree);
+}
+
+.azul {
+    border-top: 4px solid var(--bc-contblue);
+}
+
+
+
+/*For device largen than 1024px*/
+@media (min-width:1024px) {
+    .conteiner {
+        height: 560px;
+    }
+
+    .verde {
+        position: relative;
+        right: 350px;
+        top: 140px;
+    }
+
+    .vermelha {
+        position: relative;
+        bottom: 280px;
+    }
+
+    .amarelo {
+        position: relative;
+        bottom: 280px;
+    }
+
+    .azul {
+        position: relative;
+        left: 350px;
+        bottom: 840px;
+    }
+
+    footer p {
+        margin-left: 20px;
+    }
+}
+
+/*For device largen than 768px*/
+
+@media (max-width:768px) {
+    footer p {
+        margin-left: 250px;
+    }
+}
+
+
+/*For device largen than 425px*/
+@media (max-width:425px) {
+    footer p {
+        position: relative;
+        right: 120px;
+    }
+}
